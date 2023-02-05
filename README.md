@@ -1,3 +1,5 @@
 # Config Files
 
-## A collection of my config files.
+## Available config file
+* [alacritty](alacritty)
+* [Tmux](tmux)
