@@ -1,5 +1,6 @@
 # Config Files
 
 ## Available config file
-* [alacritty](alacritty)
+* [Alacritty](alacritty)
 * [Tmux](tmux)
+* [Neovim](nvim)
