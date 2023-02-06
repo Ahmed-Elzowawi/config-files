@@ -1,0 +1,6 @@
+require("ahmed.packer_setup")
+require("ahmed.core.set")
+require("ahmed.core.keymaps")
+require("ahmed.after.colorscheme")
+require("ahmed.after.lsp_setup")
+require("ahmed.after.auto_pairs")
