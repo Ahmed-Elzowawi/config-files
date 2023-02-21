@@ -1,8 +1,8 @@
 local ensure_packer = function()
   local fn = vim.fn
-  local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+  local install_path = fn.stdpath("data").."/site/pack/packer/start/packer.nvim"
   if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    fn.system({"git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path})
     vim.cmd [[packadd packer.nvim]]
     return true
   end
@@ -24,18 +24,25 @@ if not status then
 end
 
 return packer.startup(function(use)
+  -- Plugin manager
   use("wbthomason/packer.nvim")
-  use("folke/tokyonight.nvim") -- Tokyonight theme
 
-  use 'neovim/nvim-lspconfig'
-  use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
-  use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
-  use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
-  use 'L3MON4D3/LuaSnip' -- Snippets plugin
+  -- Color-scheme
+  use("ellisonleao/gruvbox.nvim") -- gruvbox theme
+  use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+  use("nvim-treesitter/playground")
 
-  use 'windwp/nvim-autopairs'
+  -- LSP and autocompletion
+  use("neovim/nvim-lspconfig")
+  use("hrsh7th/nvim-cmp") -- Autocompletion plugin
+  use("hrsh7th/cmp-nvim-lsp") -- LSP source for nvim-cmp
+  use("saadparwaiz1/cmp_luasnip") -- Snippets source for nvim-cmp
+  use("L3MON4D3/LuaSnip") -- Snippets plugin
+
+  -- Automatically close () [] {}
+  use("windwp/nvim-autopairs")
 
   if packer_bootstrap then
-    require('packer').sync()
+    require("packer").sync()
   end
 end)
