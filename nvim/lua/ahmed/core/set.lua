@@ -1,7 +1,7 @@
 local set = vim.opt
 
 set.ruler = true
-set.colorcolumn = "90"
+set.colorcolumn = "100"
 
 set.relativenumber = true
 set.number = true
