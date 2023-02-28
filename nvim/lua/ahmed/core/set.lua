@@ -15,6 +15,4 @@ set.wrap = false
 
 set.signcolumn = "yes"
 
-set.langmap = "ne;jk"
-
 set.guicursor = ""
