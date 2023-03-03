@@ -64,6 +64,12 @@ return packer.startup(function(use)
   	tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
 
+  -- Fuzzy finder
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+	requires = { {'nvim-lua/plenary.nvim'} }
+  }
+
   -- Automatically close () [] {}
   use("windwp/nvim-autopairs")
 
