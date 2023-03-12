@@ -18,7 +18,6 @@ require("nvim-tree").setup({
     dotfiles = false,
   },
   view = {
-    side = "right",
 	number = true,
 	relativenumber = true,
   },
