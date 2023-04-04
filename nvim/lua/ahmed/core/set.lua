@@ -16,3 +16,8 @@ set.wrap = false
 set.signcolumn = "yes"
 
 set.guicursor = ""
+
+set.splitbelow = true
+set.splitright = true
+
+set.equalalways = false
