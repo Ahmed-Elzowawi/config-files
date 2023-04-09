@@ -30,7 +30,6 @@ return packer.startup(function(use)
   -- Color-scheme
   use("ellisonleao/gruvbox.nvim") -- gruvbox theme
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-  use("nvim-treesitter/playground")
 
   use {
 	'VonHeikemen/lsp-zero.nvim',
