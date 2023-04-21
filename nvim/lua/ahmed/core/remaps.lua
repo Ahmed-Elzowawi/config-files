@@ -7,7 +7,14 @@ keymap.set("n", "<S-n>", "n")
 keymap.set("n", "<S-j>", "N")
 keymap.set("n", "<S-e>", "e")
 
+keymap.set("n", "<C-h>", vim.cmd.noh)
+
 keymap.set("n", "<leader>t", vim.cmd.NvimTreeToggle)
+
+keymap.set("n", "<leader>c", function()
+  vim.cmd.w()
+  vim.cmd.bd()
+end)
 
 keymap.set("n", "<leader>k", "<C-w>k")
 keymap.set("n", "<leader>j", "<C-w>j")
